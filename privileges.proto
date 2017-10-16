@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service PrivilegeManager {
+
+}
+
+message Privilege {
+    int32 privilege_id = 1;
+    string privilege_name = 2;
+    string privilege_url = 3;
+    bool is_privilege_active = 4;
+}
+
+message PrivilegeRequest {
+
+}
+
+message PrivilegeReply {
+
+}

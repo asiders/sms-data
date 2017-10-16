@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+service StudentManager {
+
+}
+
+message Student {
+
+}
+
+message StudentRequest {
+
+}
+
+message StudentReply {
+
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+service UserManager {
+    rpc CreateAccount(UserAccount) returns (UserReply) {}
+}
+
+message UserAccount {
+    int32 user_id = 1;
+    string user_name = 2;
+    string user_email = 3;
+    string password = 4;
+    string user_type = 5;
+    bool administrator = 6;
+}
+
+message UserRequest {
+    int32 page_number = 1;
+    int32 result_size = 2;
+    string query = 3;
+    bool is_privileged = 4;
+}
+
+message UserReply {
+    bool response = 1;
+    string data = 2;
+    UserAccount user = 3;
+    repeated UserAccount users = 4;
+}
